@@ -3,7 +3,7 @@
 This repo is the official implementation for the paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](upcoming-paper-link).
 
 - **New LLM editor:** We discover that, with proper prompting methods, instruction-finetuned LLMs can be highly controllable by contextual knowledge and robust to irrelevant context.
-- **New and more challenging dataset:** To better evaluate the robustness of model editors, we collect a new dataset, that contains irrelevant questions that are more challenging than the ones in existing datasets in QA. 
+- **New and more challenging dataset:** To better evaluate the robustness of model editors, we collect a new dataset, that contains irrelevant questions that are more challenging than existing ones in QA. 
 - **SOTA performance:** Our method ourperforms SOTA (sequential) model editors in QA and Fact-Checking.
 
 ![framework of EREN](images/framework.png)
@@ -54,6 +54,10 @@ python test_eren.py
 Results will be dumped to `result` by default, and you can specify the output directory by `--output_dir`.
 
 > Run `python test_eren.py -h` for more options.
+
+### Evaluation of Baselines
+
+I have also included the code for evaluating SERAC, unedited model, and fine-tuning, which are baselines in the paper. The latter two should work directly, but for SERAC, you need to train a checkpoint using the [official code of SERAC](https://github.com/eric-mitchell/serac) (because the authors of SERAC does not release the trained checkpoints), and my evaluation code should load them appropriately.
 
 ## Contact Me
 
