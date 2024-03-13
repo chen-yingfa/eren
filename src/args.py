@@ -12,7 +12,7 @@ class Args(Tap):
     seed: int = 1
 
     # Data args
-    data_path: str = "../clean_data/cf_filtered.json"
+    data_path: str = "../data/cfh_filtered.json"
     num_examples: int = 1
     one_step_mrc: int = 0
 

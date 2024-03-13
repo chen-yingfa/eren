@@ -2,15 +2,15 @@
 
 This repo is the official implementation for the paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](upcoming-paper-link).
 
-- **New LLM editor:** We discover that, with proper prompting methods, instruction-finetuned LLMs can be highly controllable by contextual knowledge and robust to irrelevant context.
-- **New and more challenging dataset:** To better evaluate the robustness of model editors, we collect a new dataset, that contains irrelevant questions that are more challenging than existing ones in QA. 
-- **SOTA performance:** Our method ourperforms SOTA (sequential) model editors in QA and Fact-Checking.
+- **State-of-the-art LLM editor:** Our model editor utilizes proper prompting methods to render instruction-finetuned LLMs highly controllable by contextual knowledge and robust to irrelevant context, thereby achieve state-of-the-art model editing in QA and fact-checking.
+- **Aggregating Multiple Edits:** Empirical results show that our method can correct answer queries that depend on knowledge from multiple edits -- a feature that most existing editors cannot handle.
+- **Cleaner and more challenging dataset:** To better evaluate the robustness of model editors, we clean up existing datasets for model editing (CounterFact and FEVER). We also construct a new, more challenging dataset -- CounterFact-Hard -- that contains irrelevant questions that are more challenging than existing ones in QA. 
 
 ![framework of EREN](images/framework.png)
 
 ## Result
 
-Our LLM editor significantly outperforms existing methods.
+Our LLM editor significantly outperforms existing methods. In the Figure below, QA and FC refers to our versions of CounterFact-Hard (question-answering dataset) and FEVER (fact-checking dataset).
 
 Metrics:
 
@@ -24,12 +24,12 @@ Metrics:
 
 Our cleaner versions of CounterFact and FEVER are included in this repo in JSON format.
 
-| Dataset     | Task Type                  | Path                              | Number of edits |
-| ----------- | -------------------------- | --------------------------------- | --------------- |
-| CounterFact | QA based on single edits   | `counterfact/cf_filtered.json`    | 1,024           |
-| FEVER       | Fact-Checking              | `fever/fever_filtered.json`       | 1,024           |
-| FEVER-Clean | Fact-Checking              | `fever/fever_filtered_small.json` | 128             |
-| HotpotQA    | QA based on multiple edits | `hotpot/hotpot.json`              | 1,024           |
+| Dataset          | Task Type                  | Path                             | Number of edits |
+| ---------------- | -------------------------- | -------------------------------- | --------------- |
+| CounterFact-Hard | QA based on single edits   | `data/cfh_filtered.json`         | 1,024           |
+| FEVER            | Fact-Checking              | `data/fever_filtered.json`       | 1,024           |
+| FEVER-Clean      | Fact-Checking              | `data/fever_filtered_small.json` | 128             |
+| HotpotQA         | QA based on multiple edits | `data/hotpot.json`               | 1,024           |
 
 > Note that for FEVER, there will be 2048 and 256 examples, because the first half are used as edits and the second half is used as out-of-scope examples to test behavior preservation on unrelated inputs.
 
