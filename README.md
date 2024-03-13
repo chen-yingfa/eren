@@ -68,7 +68,7 @@ Feel free to contact me (through e-mail by checking my GitHub profile) if you ha
 If you find this repo useful, please cite our paper:
 
 ```bibtex
-@article{chen2024robust,
+@misc{chen2024robust,
   title={Robust and Scalable Model Editing for Large Language Models},
   author={Chen, Yingfa and Zhang, Zhengyan and Han, Xu and Xiao, Chaojun and Liu, Zhiyuan and Chen, Chen and Li, Kuai and Yang, Tao and Sun, Maosong},
   url={https://www.github.com/chen-yingfa/eren},
