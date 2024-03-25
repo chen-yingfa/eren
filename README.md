@@ -57,7 +57,7 @@ Results will be dumped to `result` by default, and you can specify the output di
 
 ### Evaluation of Baselines
 
-I have also included the code for evaluating SERAC, unedited model, and fine-tuning, which are baselines in the paper. The latter two should work directly, but for SERAC, you need to train a checkpoint using the [official code of SERAC](https://github.com/eric-mitchell/serac) (because the authors of SERAC does not release the trained checkpoints), and my evaluation code should load them appropriately.
+I have also included the code for evaluating SERAC, unedited model, and fine-tuning, which are baselines in the paper. The latter two should work directly, but for SERAC, you need to train a checkpoint using the [official code of SERAC](https://github.com/eric-mitchell/serac) (because the authors of SERAC does not release the trained checkpoints), and my evaluation code should load them appropriately. For the ROME and MEND baselines, please refer to their official repository (or some other re-implmentations).
 
 ## Contact Me
 
@@ -68,7 +68,7 @@ Feel free to contact me (through e-mail by checking my GitHub profile) if you ha
 If you find this repo useful, please cite our paper:
 
 ```bibtex
-@misc{chen2024robust,
+@inproceedings{chen2024eren,
   title={Robust and Scalable Model Editing for Large Language Models},
   author={Chen, Yingfa and Zhang, Zhengyan and Han, Xu and Xiao, Chaojun and Liu, Zhiyuan and Chen, Chen and Li, Kuai and Yang, Tao and Sun, Maosong},
   url={https://www.github.com/chen-yingfa/eren},
